@@ -4,9 +4,9 @@ test('UploadFile', async({page}) =>
 {
 
     //Login With the Provider
-  await page.goto('https://talk.dev.unityhealth360.com/auth/login');
+  await page.goto('https://english.qa.unityhealth360.com/auth/login');
   await page.getByRole('textbox', { name: 'Enter Username' }).click();
-  await page.getByRole('textbox', { name: 'Enter Username' }).fill('deadpool');
+  await page.getByRole('textbox', { name: 'Enter Username' }).fill('paul123');
   await page.getByRole('textbox', { name: 'Enter Username' }).press('Tab');
   await page.getByRole('textbox', { name: 'Enter Password' }).fill('Pass@123');
   await page.getByRole('button', { name: 'Login' }).click();
@@ -14,7 +14,8 @@ test('UploadFile', async({page}) =>
    // await page.waitForTimeout(30000);
 
    //Navigate to Documents Section :- 
-    await page.locator('(//li[@class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1wijt0l"])[5]').click();
+   await page.locator('span').filter({ hasText: 'Document Library' }).first().click();
+    //await page.locator('(//li[@class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1wijt0l"])[5]').click();
     await page.waitForTimeout(2000);
 
     //Click on Upload Material :- 

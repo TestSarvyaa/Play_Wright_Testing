@@ -2,7 +2,7 @@ import { expect, test  } from "@playwright/test";
 
 test('Dropdown', async({page})=>{
   
-    await page.goto('https://testautomationpractice.blogspot.com/');//Navigate to web
+    await page.goto('https://testautomationpractice.blogspot.com/');     //Navigate to web
 
     //Multiple options/ways to select option from the dropdown
     // await page.locator('//select[@id="country"]').selectOption({label : 'India'}); //Using Label
